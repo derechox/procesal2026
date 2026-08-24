@@ -1,0 +1,61 @@
+/* =========================
+   GRUPO DE ESTUDIO
+========================= */
+
+.grupo-whatsapp {
+    margin-left: auto;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 82px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: rgba(37, 211, 102, .08);
+    border: 1px solid rgba(37, 211, 102, .25);
+    transition: .2s ease;
+}
+
+.grupo-whatsapp:hover {
+    transform: translateY(-2px);
+    background: rgba(37, 211, 102, .15);
+    border-color: #25d366;
+    box-shadow: 0 6px 18px rgba(37, 211, 102, .15);
+}
+
+.grupo-whatsapp .wa-icon {
+    font-size: 27px;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.grupo-whatsapp .wa-texto {
+    color: #86efac;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+
+    .grupo-whatsapp {
+        min-width: 68px;
+        padding: 7px 9px;
+    }
+
+    .grupo-whatsapp .wa-icon {
+        font-size: 24px;
+    }
+
+    .grupo-whatsapp .wa-texto {
+        font-size: 9px;
+    }
+
+}
+.aviso-grupo {
+    margin-top: 8px;
+    color: #475569;
+    font-size: 10px;
+    line-height: 1.5;
+}

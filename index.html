@@ -1,0 +1,2168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Derecho Procesal Civil | Cronograma</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #0b1120;
+            color: #e5e7eb;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        /* =========================
+           ENCABEZADO
+        ========================= */
+
+        header {
+            background: linear-gradient(135deg, #111c35, #172554);
+            border: 1px solid #263858;
+            border-radius: 20px;
+            padding: 28px;
+            margin-bottom: 22px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.25);
+        }
+
+        .titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 8px;
+        }
+
+        .titulo .icono {
+            font-size: 38px;
+            flex-shrink: 0;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #f8fafc;
+        }
+
+        .subtitulo {
+            color: #94a3b8;
+            font-size: 15px;
+            margin-left: 53px;
+        }
+
+        /* =========================
+           GRUPO DE ESTUDIO
+        ========================= */
+
+        .grupo-whatsapp {
+            margin-left: auto;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 82px;
+            padding: 8px 12px;
+            border-radius: 12px;
+            background: rgba(37, 211, 102, .08);
+            border: 1px solid rgba(37, 211, 102, .25);
+            transition: .2s ease;
+            flex-shrink: 0;
+        }
+
+        .grupo-whatsapp:hover {
+            transform: translateY(-2px);
+            background: rgba(37, 211, 102, .15);
+            border-color: #25d366;
+            box-shadow: 0 6px 18px rgba(37, 211, 102, .15);
+        }
+
+        .grupo-whatsapp .wa-icon {
+            width: 28px;
+            height: 28px;
+            margin-bottom: 4px;
+        }
+
+        .grupo-whatsapp .wa-icon svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .grupo-whatsapp .wa-texto {
+            color: #86efac;
+            font-size: 10px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .info span {
+            background: rgba(255,255,255,.06);
+            border: 1px solid rgba(255,255,255,.08);
+            padding: 8px 13px;
+            border-radius: 10px;
+            font-size: 13px;
+            color: #cbd5e1;
+        }
+
+        /* =========================
+           CONTADOR
+        ========================= */
+
+        .countdown {
+            margin-top: 20px;
+            background: rgba(15,23,42,.75);
+            border: 1px solid #334b75;
+            border-radius: 15px;
+            padding: 17px;
+            text-align: center;
+        }
+
+        .countdown-title {
+            color: #93c5fd;
+            font-size: 14px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        #contador {
+            font-size: 28px;
+            font-weight: bold;
+            color: #f8fafc;
+        }
+
+        #fechaParcial {
+            color: #94a3b8;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        /* =========================
+           MESES
+        ========================= */
+
+        .mes {
+            margin-bottom: 28px;
+        }
+
+        .mes-titulo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            padding-left: 5px;
+        }
+
+        .mes-titulo h2 {
+            font-size: 20px;
+            color: #bfdbfe;
+        }
+
+        .mes-linea {
+            flex: 1;
+            height: 1px;
+            background: #24324b;
+        }
+
+        /* =========================
+           CLASES
+        ========================= */
+
+        .clase {
+            position: relative;
+            background: #111827;
+            border: 1px solid #263449;
+            border-radius: 15px;
+            margin-bottom: 12px;
+            padding: 17px 18px 17px 22px;
+            transition: .2s ease;
+            overflow: hidden;
+        }
+
+        .clase:hover {
+            transform: translateY(-2px);
+            border-color: #3b82f6;
+            box-shadow: 0 8px 20px rgba(0,0,0,.2);
+        }
+
+        .clase::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #334155;
+        }
+
+        .cabecera-clase {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .estado {
+            font-size: 22px;
+            width: 28px;
+            text-align: center;
+        }
+
+        .fecha {
+            font-weight: bold;
+            color: #f1f5f9;
+            font-size: 16px;
+        }
+
+        .tipo {
+            font-size: 11px;
+            padding: 5px 8px;
+            border-radius: 7px;
+            background: #1e293b;
+            color: #93c5fd;
+            margin-left: auto;
+            white-space: nowrap;
+        }
+
+        .temas {
+            padding-left: 40px;
+            color: #cbd5e1;
+            line-height: 1.65;
+            font-size: 14px;
+        }
+
+        .temas div {
+            margin-bottom: 5px;
+        }
+
+        /* =========================
+           CLASE PASADA
+        ========================= */
+
+        .clase.pasada {
+            border-color: #14532d;
+        }
+
+        .clase.pasada::before {
+            background: #22c55e;
+        }
+
+        .clase.pasada .estado {
+            color: #22c55e;
+        }
+
+        /* =========================
+           CLASE DE HOY
+        ========================= */
+
+        .clase.hoy {
+            border-color: #2563eb;
+            background: #111d36;
+        }
+
+        .clase.hoy::before {
+            background: #3b82f6;
+        }
+
+        .hoy-badge {
+            background: #2563eb;
+            color: white;
+            font-size: 10px;
+            padding: 4px 7px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+        }
+
+        /* =========================
+           PARCIALES
+        ========================= */
+
+        .evaluacion {
+            background: linear-gradient(135deg, #24170b, #35210c);
+            border: 2px solid #d97706;
+            box-shadow: 0 8px 25px rgba(217,119,6,.12);
+        }
+
+        .evaluacion::before {
+            background: #f59e0b;
+        }
+
+        .evaluacion .fecha {
+            color: #fbbf24;
+            font-size: 17px;
+        }
+
+        .parcial-icon {
+            font-size: 24px;
+        }
+
+        /* =========================
+           RECUPERATORIOS
+        ========================= */
+
+        .recuperatorio {
+            background: linear-gradient(135deg, #24101a, #301524);
+            border: 2px solid #be185d;
+        }
+
+        .recuperatorio::before {
+            background: #ec4899;
+        }
+
+        .recuperatorio .fecha {
+            color: #f9a8d4;
+        }
+
+        /* =========================
+           FINAL
+        ========================= */
+
+        .final {
+            background: linear-gradient(135deg, #161126, #211638);
+            border: 2px solid #7c3aed;
+        }
+
+        .final::before {
+            background: #8b5cf6;
+        }
+
+        .final .fecha {
+            color: #c4b5fd;
+        }
+
+        /* =========================
+           LEYENDA
+        ========================= */
+
+        .leyenda {
+            background: #0f172a;
+            border: 1px solid #24324b;
+            border-radius: 14px;
+            padding: 15px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            justify-content: center;
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        .leyenda-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+            color: #64748b;
+            font-size: 12px;
+            padding: 20px 10px 10px;
+            line-height: 1.6;
+        }
+
+        .aviso-grupo {
+            margin-top: 8px;
+            color: #475569;
+            font-size: 11px;
+        }
+
+        /* =========================
+           CELULAR
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 10px;
+            }
+
+            header {
+                padding: 20px;
+                border-radius: 16px;
+            }
+
+            .titulo {
+                gap: 10px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .titulo .icono {
+                font-size: 30px;
+            }
+
+            .grupo-whatsapp {
+                min-width: 68px;
+                padding: 7px 9px;
+            }
+
+            .grupo-whatsapp .wa-icon {
+                width: 24px;
+                height: 24px;
+            }
+
+            .grupo-whatsapp .wa-texto {
+                font-size: 9px;
+            }
+
+            .subtitulo {
+                margin-left: 45px;
+                font-size: 13px;
+            }
+
+            #contador {
+                font-size: 22px;
+            }
+
+            .clase {
+                padding: 14px 12px 14px 15px;
+            }
+
+            .cabecera-clase {
+                flex-wrap: wrap;
+            }
+
+            .tipo {
+                margin-left: 40px;
+            }
+
+            .temas {
+                padding-left: 40px;
+                font-size: 13px;
+            }
+
+            footer {
+                padding-bottom: 20px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header>
+
+        <div class="titulo">
+
+            <div class="icono">
+                ⚖️
+            </div>
+
+            <div>
+                <h1>Derecho Procesal Civil 2do cuatri 2026</h1>
+            </div>
+
+            <!-- =========================
+                 GRUPO DE ESTUDIO
+            ========================== -->
+
+            <a
+                href="https://chat.whatsapp.com/JxtwnBGtgXXDaFkv0RhtqZ"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="grupo-whatsapp"
+                title="Abrir grupo de estudio">
+
+                <div class="wa-icon">
+
+                    <svg
+                        viewBox="0 0 32 32"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+
+                        <path
+                            fill="#25D366"
+                            d="M16 3C8.82 3 3 8.82 3 16c0 2.29.6 4.44 1.75 6.35L3.08 28.5l6.3-1.64A12.94 12.94 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3Zm0 23.7c-2.1 0-4.16-.56-5.96-1.63l-.43-.26-3.74.98 1-3.64-.28-.44A10.7 10.7 0 1 1 16 26.7Z"/>
+
+                        <path
+                            fill="#25D366"
+                            d="M12.03 9.45c-.24-.54-.5-.55-.73-.56h-.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.12-1.14 2.73s1.17 3.17 1.33 3.39c.16.22 2.27 3.64 5.54 4.96 2.74 1.1 3.3.88 3.9.83.6-.05 1.93-.79 2.2-1.55.27-.76.27-1.41.19-1.55-.08-.14-.3-.22-.62-.38-.33-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.16-.22.32-.84 1.06-1.03 1.28-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.87-1.63-1.94-1.82-2.27-.19-.32-.02-.5.14-.66.14-.14.33-.38.49-.57.16-.19.22-.32.33-.54.11-.22.05-.41-.03-.57-.08-.16-.7-1.77-.98-2.42Z"/>
+
+                    </svg>
+
+                </div>
+
+                <div class="wa-texto">
+                    Grupo de estudio
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <div class="subtitulo">
+            Cronograma de clases · Curso Elementos de Derecho Procesal Civil
+        </div>
+
+
+        <div class="info">
+
+            <span>
+                📅 Lunes y jueves
+            </span>
+
+            <span>
+                🕔 17:00 a 18:30 hs
+            </span>
+
+            <span>
+                🎓 Facultad de Derecho UBA
+            </span>
+
+        </div>
+
+
+        <!-- =========================
+             CONTADOR DINÁMICO
+        ========================== -->
+
+        <div class="countdown">
+
+            <div
+                class="countdown-title"
+                id="tituloContador">
+                ⏳ Primer Parcial
+            </div>
+
+            <div id="contador">
+                Calculando...
+            </div>
+
+            <div id="fechaParcial">
+                Lunes 5 de octubre de 2026 · Oral presencial
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         LEYENDA
+    ========================== -->
+
+    <div class="leyenda">
+
+        <div class="leyenda-item">
+            <span>🟢</span>
+            Clase realizada
+        </div>
+
+        <div class="leyenda-item">
+            <span>🔵</span>
+            Clase de hoy
+        </div>
+
+        <div class="leyenda-item">
+            <span>🟠</span>
+            Parcial
+        </div>
+
+        <div class="leyenda-item">
+            <span>🩷</span>
+            Recuperatorio
+        </div>
+
+        <div class="leyenda-item">
+            <span>🟣</span>
+            Final
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         AGOSTO
+    =================================================== -->
+
+    <section class="mes">
+
+        <div class="mes-titulo">
+            <h2>AGOSTO</h2>
+            <div class="mes-linea"></div>
+        </div>
+
+
+        <div class="clase" data-fecha="2026-08-13">
+
+            <div class="cabecera-clase">
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Jueves 13 de agosto
+                </div>
+
+                <div class="tipo">
+                    SINCRÓNICA · ZOOM
+                </div>
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Clase presentación.
+                </div>
+
+                <div>
+                    Introducción al Derecho Procesal.
+                </div>
+
+                <div>
+                    El conflicto y sus medios de resolución.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-08-20">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Jueves 20 de agosto
+                </div>
+
+                <div class="tipo">
+                    SINCRÓNICA · ZOOM
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Jurisdicción, Acción, Pretensión y Proceso.
+                </div>
+
+                <div>
+                    Tipos de procesos judiciales. Clasificación.
+                </div>
+
+                <div>
+                    Procesos Colectivos.
+                </div>
+
+                <div>
+                    Principios procesales.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-08-24">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Lunes 24 de agosto
+                </div>
+
+                <div class="tipo">
+                    SINCRÓNICA
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Jurisdicción y Competencia. Distinción.
+                </div>
+
+                <div>
+                    Competencia federal y ordinaria.
+                </div>
+
+                <div>
+                    Criterios de distribución de la competencia.
+                </div>
+
+                <div>
+                    Conflictos de competencia.
+                </div>
+
+                <div>
+                    Organización de los Tribunales.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-08-27">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Jueves 27 de agosto
+                </div>
+
+                <div class="tipo">
+                    ASINCRÓNICA · ZOOM
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Sujetos Procesales.
+                </div>
+
+                <div>
+                    Partes. Concepto. Capacidad de hecho y capacidad procesal.
+                </div>
+
+                <div>
+                    Legitimación. Representación. Gestor procesal.
+                </div>
+
+                <div>
+                    Auxiliares de las partes. Abogados.
+                </div>
+
+                <div>
+                    Derechos y deberes de las partes y auxiliares.
+                </div>
+
+                <div>
+                    Honorarios. Temeridad y Malicia.
+                </div>
+
+                <div>
+                    Participación en los procesos de niños, niñas y adolescentes.
+                </div>
+
+                <div>
+                    Litisconsorcio. Intervención de terceros. Intereses difusos.
+                </div>
+
+                <div>
+                    Juez. Nombramiento y remoción. Deberes y facultades.
+                </div>
+
+                <div>
+                    Recusación y excusación.
+                </div>
+
+                <div>
+                    El Ministerio Público.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-08-31">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Lunes 31 de agosto
+                </div>
+
+                <div class="tipo">
+                    SINCRÓNICA · ZOOM
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Actos Procesales. Concepto. Clasificación.
+                </div>
+
+                <div>
+                    Lugar. Domicilio. Domicilio electrónico.
+                </div>
+
+                <div>
+                    Tiempo. Plazos procesales.
+                </div>
+
+                <div>
+                    Forma de los actos procesales.
+                </div>
+
+                <div>
+                    Nulidades procesales.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         SEPTIEMBRE
+    =================================================== -->
+
+    <section class="mes">
+
+        <div class="mes-titulo">
+            <h2>SEPTIEMBRE</h2>
+            <div class="mes-linea"></div>
+        </div>
+
+
+        <div class="clase" data-fecha="2026-09-03">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Jueves 3 de septiembre
+                </div>
+
+                <div class="tipo">
+                    SINCRÓNICA · ZOOM
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Actos Procesales (continuación).
+                </div>
+
+                <div>
+                    Notificaciones. Concepto. Tipos de Notificación.
+                </div>
+
+                <div>
+                    Notificación electrónica.
+                </div>
+
+                <div>
+                    Nota electrónica.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-09-07">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Lunes 7 de septiembre
+                </div>
+
+                <div class="tipo">
+                    SINCRÓNICA · ZOOM
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Diligencias preliminares.
+                </div>
+
+                <div>
+                    Prueba anticipada.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-09-10">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Jueves 10 de septiembre
+                </div>
+
+                <div class="tipo">
+                    ASINCRÓNICA
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Mediación y Arbitraje.
+                </div>
+
+                <div>
+                    Demanda. Modificación y ampliación.
+                </div>
+
+                <div>
+                    Tasa de justicia.
+                </div>
+
+                <div>
+                    Beneficio de litigar sin gastos.
+                </div>
+
+                <div>
+                    Traslado de la demanda. Particularidades.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-09-14">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Lunes 14 de septiembre
+                </div>
+
+                <div class="tipo">
+                    SINCRÓNICA · ZOOM
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Actitudes del demandado frente a la notificación del traslado.
+                </div>
+
+                <div>
+                    Contestación de la demanda.
+                </div>
+
+                <div>
+                    Cargas procesales.
+                </div>
+
+                <div>
+                    Rebeldía e incontestación de la demanda.
+                </div>
+
+                <div>
+                    Allanamiento y reconvención.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-09-17">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Jueves 17 de septiembre
+                </div>
+
+                <div class="tipo">
+                    SINCRÓNICA · ZOOM
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Excepciones: concepto.
+                </div>
+
+                <div>
+                    Clasificación.
+                </div>
+
+                <div>
+                    Trámite.
+                </div>
+
+                <div>
+                    Desarrollo de cada una.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-09-21">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Lunes 21 de septiembre
+                </div>
+
+                <div class="tipo">
+                    SINCRÓNICA · ZOOM
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    La prueba. Concepto. Objeto. Fin.
+                </div>
+
+                <div>
+                    Medios de prueba. Principios probatorios.
+                </div>
+
+                <div>
+                    Carga de la prueba en el Código Civil y Comercial.
+                </div>
+
+                <div>
+                    Sistemas de valoración.
+                </div>
+
+                <div>
+                    Etapa probatoria del proceso.
+                </div>
+
+                <div>
+                    Audiencia Preliminar.
+                </div>
+
+                <div>
+                    Hechos Nuevos.
+                </div>
+
+                <div>
+                    Caducidad y negligencia de pruebas.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-09-24">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Jueves 24 de septiembre
+                </div>
+
+                <div class="tipo">
+                    ASINCRÓNICA
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Prueba pericial. Concepto. Ofrecimiento. Producción. Valoración.
+                </div>
+
+                <div>
+                    Negligencia. Caducidad.
+                </div>
+
+                <div>
+                    Reconocimiento Judicial.
+                </div>
+
+                <div>
+                    Prueba Indiciaria.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-09-28">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Lunes 28 de septiembre
+                </div>
+
+                <div class="tipo">
+                    SINCRÓNICA · ZOOM
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Prueba confesional. Concepto. Ofrecimiento.
+                </div>
+
+                <div>
+                    Producción. Valoración. Negligencia. Caducidad.
+                </div>
+
+                <div>
+                    Prueba testimonial. Concepto. Ofrecimiento.
+                </div>
+
+                <div>
+                    Producción. Deberes de los testigos.
+                </div>
+
+                <div>
+                    Valoración. Negligencia. Caducidad.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         OCTUBRE
+    =================================================== -->
+
+    <section class="mes">
+
+        <div class="mes-titulo">
+            <h2>OCTUBRE</h2>
+            <div class="mes-linea"></div>
+        </div>
+
+
+        <div class="clase" data-fecha="2026-10-01">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Jueves 1 de octubre
+                </div>
+
+                <div class="tipo">
+                    PRÁCTICA · ZOOM
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Práctica sincrónica de Audiencia Preliminar.
+                </div>
+
+                <div>
+                    Absolución de posiciones.
+                </div>
+
+                <div>
+                    Prueba testimonial.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRIMER PARCIAL -->
+
+        <div
+            class="clase evaluacion"
+            data-fecha="2026-10-05">
+
+            <div class="cabecera-clase">
+
+                <div class="estado parcial-icon">
+                    🟠
+                </div>
+
+                <div class="fecha">
+                    Lunes 5 de octubre
+                </div>
+
+                <div class="tipo">
+                    PRIMER PARCIAL
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    <strong>
+                        PRIMER PARCIAL ORAL PRESENCIAL
+                    </strong>
+                </div>
+
+                <div>
+                    📍 Facultad de Derecho
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-10-08">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Jueves 8 de octubre
+                </div>
+
+                <div class="tipo">
+                    ASINCRÓNICA
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Prueba Documental. Concepto. Ofrecimiento.
+                </div>
+
+                <div>
+                    Producción. Valoración. Negligencia.
+                </div>
+
+                <div>
+                    Prueba Informativa. Concepto. Ofrecimiento.
+                </div>
+
+                <div>
+                    Valoración. Negligencia. Caducidad.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RECUPERATORIO -->
+
+        <div
+            class="clase recuperatorio"
+            data-fecha="2026-10-15">
+
+            <div class="cabecera-clase">
+
+                <div class="estado parcial-icon">
+                    🩷
+                </div>
+
+                <div class="fecha">
+                    Jueves 15 de octubre
+                </div>
+
+                <div class="tipo">
+                    RECUPERATORIO
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    <strong>
+                        RECUPERATORIO ORAL
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-10-19">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Lunes 19 de octubre
+                </div>
+
+                <div class="tipo">
+                    SINCRÓNICA · ZOOM
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Alegatos.
+                </div>
+
+                <div>
+                    Modos anormales de terminación del proceso.
+                </div>
+
+                <div>
+                    Desistimiento del proceso y del derecho.
+                </div>
+
+                <div>
+                    Allanamiento. Conciliación y transacción.
+                </div>
+
+                <div>
+                    Caducidad de la instancia.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-10-22">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Jueves 22 de octubre
+                </div>
+
+                <div class="tipo">
+                    SINCRÓNICA · ZOOM
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Resoluciones judiciales.
+                </div>
+
+                <div>
+                    Teoría General de los recursos.
+                </div>
+
+                <div>
+                    Clasificación, caracteres y requisitos.
+                </div>
+
+                <div>
+                    Aclaratoria.
+                </div>
+
+                <div>
+                    Revocatoria.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-10-26">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Lunes 26 de octubre
+                </div>
+
+                <div class="tipo">
+                    SINCRÓNICA
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Recurso de Apelación.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-10-29">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Jueves 29 de octubre
+                </div>
+
+                <div class="tipo">
+                    ASINCRÓNICA · ZOOM
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Recurso de apelación (continuación).
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         NOVIEMBRE
+    =================================================== -->
+
+    <section class="mes">
+
+        <div class="mes-titulo">
+            <h2>NOVIEMBRE</h2>
+            <div class="mes-linea"></div>
+        </div>
+
+
+        <div class="clase" data-fecha="2026-11-02">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Lunes 2 de noviembre
+                </div>
+
+                <div class="tipo">
+                    SINCRÓNICA · ZOOM
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Recurso de apelación (continuación).
+                </div>
+
+                <div>
+                    Recurso de queja.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-11-05">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Jueves 5 de noviembre
+                </div>
+
+                <div class="tipo">
+                    ASINCRÓNICA
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Medidas Cautelares. Concepto. Finalidad.
+                </div>
+
+                <div>
+                    Caracteres. Presupuestos.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-11-09">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Lunes 9 de noviembre
+                </div>
+
+                <div class="tipo">
+                    SINCRÓNICA · ZOOM
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Medidas Cautelares (continuación).
+                </div>
+
+                <div>
+                    Juicio Ejecutivo.
+                </div>
+
+                <div>
+                    Ejecución de Sentencia.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-11-12">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Jueves 12 de noviembre
+                </div>
+
+                <div class="tipo">
+                    SINCRÓNICA · ZOOM
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Repaso general.
+                </div>
+
+                <div>
+                    Ejercicios.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SEGUNDO PARCIAL -->
+
+        <div
+            class="clase evaluacion"
+            data-fecha="2026-11-16">
+
+            <div class="cabecera-clase">
+
+                <div class="estado parcial-icon">
+                    🟠
+                </div>
+
+                <div class="fecha">
+                    Lunes 16 de noviembre
+                </div>
+
+                <div class="tipo">
+                    SEGUNDO PARCIAL
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    <strong>
+                        SEGUNDO PARCIAL ORAL PRESENCIAL
+                    </strong>
+                </div>
+
+                <div>
+                    📍 Facultad de Derecho
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="clase" data-fecha="2026-11-19">
+
+            <div class="cabecera-clase">
+
+                <div class="estado">○</div>
+
+                <div class="fecha">
+                    Jueves 19 de noviembre
+                </div>
+
+                <div class="tipo">
+                    REPASO
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    Clase de repaso previa al recuperatorio.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RECUPERATORIO -->
+
+        <div
+            class="clase recuperatorio"
+            data-fecha="2026-11-26">
+
+            <div class="cabecera-clase">
+
+                <div class="estado parcial-icon">
+                    🩷
+                </div>
+
+                <div class="fecha">
+                    Jueves 26 de noviembre
+                </div>
+
+                <div class="tipo">
+                    RECUPERATORIO
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    <strong>
+                        RECUPERATORIO ORAL
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         DICIEMBRE
+    =================================================== -->
+
+    <section class="mes">
+
+        <div class="mes-titulo">
+            <h2>DICIEMBRE</h2>
+            <div class="mes-linea"></div>
+        </div>
+
+
+        <div
+            class="clase final"
+            data-fecha="2026-12-03">
+
+            <div class="cabecera-clase">
+
+                <div class="estado parcial-icon">
+                    🟣
+                </div>
+
+                <div class="fecha">
+                    Jueves 3 de diciembre
+                </div>
+
+                <div class="tipo">
+                    FINAL
+                </div>
+
+            </div>
+
+            <div class="temas">
+
+                <div>
+                    <strong>
+                        FINAL ORAL PRESENCIAL
+                    </strong>
+                </div>
+
+                <div>
+                    📍 Facultad de Derecho
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div>
+            Derecho Procesal Civil · Cronograma 2026
+        </div>
+
+        <div class="aviso-grupo">
+            Grupo de estudio creado por estudiantes.<br>
+            No es un grupo oficial de la cátedra ni de la Facultad de Derecho UBA.
+        </div>
+
+    </footer>
+
+</div>
+
+
+<script>
+
+    /* ==================================================
+       FECHAS IMPORTANTES
+    ================================================== */
+
+    const fechas = {
+
+        primerParcial:
+            new Date("2026-10-05T00:00:00"),
+
+        segundoParcial:
+            new Date("2026-11-16T00:00:00"),
+
+        final:
+            new Date("2026-12-03T00:00:00")
+
+    };
+
+
+    /* ==================================================
+       REFERENCIAS AL ENCABEZADO
+    ================================================== */
+
+    const tituloContador =
+        document.getElementById("tituloContador");
+
+    const contador =
+        document.getElementById("contador");
+
+    const fechaParcial =
+        document.getElementById("fechaParcial");
+
+
+    /* ==================================================
+       FORMATEAR CONTADOR
+    ================================================== */
+
+    function obtenerTiempo(diferencia) {
+
+        const dias = Math.floor(
+            diferencia /
+            (1000 * 60 * 60 * 24)
+        );
+
+        const horas = Math.floor(
+            (diferencia /
+            (1000 * 60 * 60)) % 24
+        );
+
+        const minutos = Math.floor(
+            (diferencia /
+            (1000 * 60)) % 60
+        );
+
+        const segundos = Math.floor(
+            (diferencia / 1000) % 60
+        );
+
+        return `${dias} días · ${horas} hs · ${minutos} min · ${segundos} seg`;
+
+    }
+
+
+    /* ==================================================
+       CONTADOR INTELIGENTE
+    ================================================== */
+
+    function actualizarContador() {
+
+        const ahora = new Date();
+
+
+        /* =========================
+           PRIMER PARCIAL
+        ========================= */
+
+        if (ahora < fechas.primerParcial) {
+
+            const diferencia =
+                fechas.primerParcial - ahora;
+
+            tituloContador.textContent =
+                "⏳ Primer Parcial";
+
+            contador.textContent =
+                obtenerTiempo(diferencia);
+
+            fechaParcial.textContent =
+                "Lunes 5 de octubre de 2026 · Oral presencial";
+
+            return;
+
+        }
+
+
+        /* =========================
+           DÍA DEL PRIMER PARCIAL
+        ========================= */
+
+        if (
+            ahora.toDateString() ===
+            fechas.primerParcial.toDateString()
+        ) {
+
+            tituloContador.textContent =
+                "🟠 Primer Parcial";
+
+            contador.textContent =
+                "¡Hoy es el Primer Parcial!";
+
+            fechaParcial.textContent =
+                "Lunes 5 de octubre de 2026 · Oral presencial";
+
+            return;
+
+        }
+
+
+        /* =========================
+           SEGUNDO PARCIAL
+        ========================= */
+
+        if (ahora < fechas.segundoParcial) {
+
+            const diferencia =
+                fechas.segundoParcial - ahora;
+
+            tituloContador.textContent =
+                "⏳ Segundo Parcial";
+
+            contador.textContent =
+                obtenerTiempo(diferencia);
+
+            fechaParcial.textContent =
+                "Lunes 16 de noviembre de 2026 · Oral presencial";
+
+            return;
+
+        }
+
+
+        /* =========================
+           DÍA DEL SEGUNDO PARCIAL
+        ========================= */
+
+        if (
+            ahora.toDateString() ===
+            fechas.segundoParcial.toDateString()
+        ) {
+
+            tituloContador.textContent =
+                "🟠 Segundo Parcial";
+
+            contador.textContent =
+                "¡Hoy es el Segundo Parcial!";
+
+            fechaParcial.textContent =
+                "Lunes 16 de noviembre de 2026 · Oral presencial";
+
+            return;
+
+        }
+
+
+        /* =========================
+           DESPUÉS DEL SEGUNDO PARCIAL
+        ========================= */
+
+        if (ahora < fechas.final) {
+
+            const diferencia =
+                fechas.final - ahora;
+
+            tituloContador.textContent =
+                "⏳ Final";
+
+            contador.textContent =
+                obtenerTiempo(diferencia);
+
+            fechaParcial.textContent =
+                "Jueves 3 de diciembre de 2026 · Oral presencial";
+
+            return;
+
+        }
+
+
+        /* =========================
+           DÍA DEL FINAL
+        ========================= */
+
+        if (
+            ahora.toDateString() ===
+            fechas.final.toDateString()
+        ) {
+
+            tituloContador.textContent =
+                "🟣 Final";
+
+            contador.textContent =
+                "¡Hoy es el Final!";
+
+            fechaParcial.textContent =
+                "Jueves 3 de diciembre de 2026 · Oral presencial";
+
+            return;
+
+        }
+
+
+        /* =========================
+           DESPUÉS DEL FINAL
+        ========================= */
+
+        tituloContador.textContent =
+            "🎓 Cursada finalizada";
+
+        contador.textContent =
+            "¡Felicitaciones!";
+
+        fechaParcial.textContent =
+            "Derecho Procesal Civil · 2026";
+
+    }
+
+
+    /* ==================================================
+       MARCAR CLASES SEGÚN LA FECHA
+    ================================================== */
+
+    function marcarClases() {
+
+        const ahora = new Date();
+
+        const hoy = new Date(
+            ahora.getFullYear(),
+            ahora.getMonth(),
+            ahora.getDate()
+        );
+
+
+        const clases =
+            document.querySelectorAll(
+                ".clase[data-fecha]"
+            );
+
+
+        clases.forEach(clase => {
+
+            const fechaTexto =
+                clase.dataset.fecha;
+
+            const fechaClase =
+                new Date(
+                    fechaTexto + "T00:00:00"
+                );
+
+            const estado =
+                clase.querySelector(".estado");
+
+
+            /* =========================
+               NO MODIFICAR
+               PARCIALES / RECUPERATORIOS / FINAL
+            ========================= */
+
+            if (
+                clase.classList.contains("evaluacion") ||
+                clase.classList.contains("recuperatorio") ||
+                clase.classList.contains("final")
+            ) {
+
+                return;
+
+            }
+
+
+            /* =========================
+               CLASE PASADA
+            ========================= */
+
+            if (fechaClase < hoy) {
+
+                clase.classList.add("pasada");
+
+                estado.textContent = "✓";
+
+            }
+
+
+            /* =========================
+               CLASE DE HOY
+            ========================= */
+
+            else if (
+                fechaClase.getTime() ===
+                hoy.getTime()
+            ) {
+
+                clase.classList.add("hoy");
+
+                estado.textContent = "●";
+
+
+                /* =========================
+                   EVITAR DUPLICAR "HOY"
+                ========================= */
+
+                if (
+                    !clase.querySelector(".hoy-badge")
+                ) {
+
+                    const badge =
+                        document.createElement("span");
+
+                    badge.className =
+                        "hoy-badge";
+
+                    badge.textContent =
+                        "HOY";
+
+                    clase.querySelector(
+                        ".cabecera-clase"
+                    ).appendChild(badge);
+
+                }
+
+            }
+
+        });
+
+    }
+
+
+    /* ==================================================
+       INICIAR
+    ================================================== */
+
+    marcarClases();
+
+    actualizarContador();
+
+
+    /* Actualizar contador cada segundo */
+
+    setInterval(
+        actualizarContador,
+        1000
+    );
+
+</script>
+
+</body>
+</html>
